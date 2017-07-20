@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Form</title>
+  
+  
+  
+
+      <link rel="stylesheet" href="css1/style.css">
+
+      <link rel="stylesheet" href="css1/style1.css">
+  <script type="text/javascript">
+
+function myfun1()
+{
+
+  document.getElementById("money").innerHTML="10000";
+}
+function myfun2()
+{
+
+  document.getElementById("money").innerHTML="15000";
+}
+function myfun3()
+{
+
+  document.getElementById("money").innerHTML="20000";
+}
+  </script>
+</head>
+
+<body>
+   <link rel="stylesheet" href="css1/style2.css">
+<link rel="stylesheet" href="css1/style3.css">
+ 
+<div class="container">
+  <div id="Checkout" class="inline">
+  
+      <h1>Pay Invoice</h1>
+      <div class="card-row">
+          <span class="visa"></span>
+          <span class="mastercard"></span>
+          <span class="amex"></span>
+          <span class="discover"></span>
+      </div>
+      <form>
+          <div class="form-group">
+         
+               <input type="radio" name="gender"index="pay" value="normal" onclick="myfun1()"> normal
+               <input type="radio" name="gender" index="pay"value="ac" onclick="myfun2()"> ac
+               <input type="radio" name="gender" index="pay" value="deluxe" onclick="myfun3()"> ac-deluxe<br/>
+              <label for="PaymentAmount">Payment amount</label>
+              <div class="amount-placeholder">
+                  <span>Rs</span>
+                  <span id="money"></span>
+              </div>
+          </div>
+          <div class="form-group">
+              <label or="NameOnCard">Name on card</label>
+              <input id="NameOnCard" class="form-control" type="text" maxlength="255" required></input>
+          </div>
+          <div class="form-group">
+              <label for="CreditCardNumber">Card number</label>
+              <input id="CreditCardNumber" class="null card-image form-control" placeholder="xxxx-xxxx-xxxx-xxxx"type="text" required></input>
+          </div>
+          <div class="expiry-date-group form-group">
+              <label for="ExpiryDate">Expiry date</label>
+              <input id="ExpiryDate" class="form-control" type="text" placeholder="MM / YY" maxlength="7" required></input>
+          </div>
+          <div class="security-code-group form-group">
+              <label for="SecurityCode">CVV</label>
+              <div class="input-container" >
+                  <input id="SecurityCode" class="form-control" type="text" required></input>
+                
+              </div>
+             
+          </div>
+         
+          <button id="PayButton" class="btn btn-block btn-success submit-button" type="submit">
+              <span class="submit-button-lock"></span>
+              <span class="align-middle"><a href="bookdone.php">Pay</span>
+          </button>
+      </form>
+  </div>
+</div>
+  <script src="js1/index1.js"></script>
+<script src="js1/index2.js"></script>
+
+    <script src="js1/index.js"></script>
+
+</body>
+</html>
